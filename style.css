@@ -1,0 +1,134 @@
+/* Reset default margin and padding for clean styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling with modern font */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Site Header - simple and clean */
+.site-header {
+  background-color: #0d7377;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Header content wrapper */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Site name heading */
+.site-header h2 {
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* CTA Banner - tall, visually striking container */
+.cta-banner {
+  /* Single color overlay (teal) over the background image for a consistent tint */
+  background: linear-gradient(rgba(13, 108, 119, 0.715), rgba(13, 115, 119, 0.65)), url('img/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 20px 160px 20px;
+  text-align: center;
+  min-height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA Content wrapper for text alignment and spacing */
+.cta-content {
+  max-width: 700px;
+}
+
+/* Main heading - large and eye-catching */
+.cta-banner h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Description text - readable and clear */
+.cta-banner p {
+  font-size: 18px;
+  color: #e8f4f8;
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+
+/* CTA Button - bright, eye-catching, stands out from background */
+.cta-button {
+  display: inline-block;
+  background-color: #ffd60a;
+  color: #0d7377;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid #ffd60a;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect for interactivity */
+.cta-button:hover {
+  background-color: #ffb703;
+  border-color: #ffb703;
+  cursor: pointer;
+}
+
+/* Fostering Info Section - two column layout */
+.fostering-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Info Column - evenly sized columns with equal width */
+.info-column {
+  display: inline-block;
+  width: 48%;
+  margin: 10px 1%;
+  vertical-align: middle;
+  text-align: left;
+}
+
+/* Image styling within the column */
+.info-column img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading for fostering info section */
+.fostering-info h2 {
+  font-size: 32px;
+  color: #0d7377;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Paragraph text in fostering info section */
+.fostering-info p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
