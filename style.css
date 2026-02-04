@@ -376,3 +376,36 @@ body {
     display: block;
   }
 }
+
+/* Footer */
+.site-footer {
+  background-color: #052f3d;
+  color: white;
+  padding: 40px 20px;
+}
+
+.site-footer .container {
+  text-align: left;
+}
+
+.footer-content {
+  margin-bottom: 30px;
+}
+
+.footer-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  margin: 8px 0;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
