@@ -1,0 +1,378 @@
+/* Base page styles and modern font */
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  background: #eaeaea;
+  color: #052f3d;
+}
+
+/* Simple header with site name */
+/* Use a subtle blue/teal backdrop and a thin border to align with the banner palette */
+.site-header {
+  background: linear-gradient(180deg, rgba(27,154,170,0.06), rgba(15,76,117,0.03));
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(11,107,136,0.12);
+  text-align: center; /* center the short title */
+}
+
+/* Header navigation layout - keep tabs on right, logo left */
+.header-nav {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  height: 40px;            /* fixed header height for alignment */
+  line-height: initial;    /* we will vertically center with transforms */
+}
+
+/* Logo left */
+.site-title {
+  float: none;
+  position: absolute;
+  left: -240px; /* moved much farther left so the logo reaches near the page edge */
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+}
+
+/* Tabs right */
+.site-tabs {
+  float: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.site-tabs li {
+  display: inline-block;
+  margin-left: 18px;
+  vertical-align: middle;
+}
+
+.site-tab {
+  color: #0b6b88;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-tab:hover,
+.site-tab:focus {
+  border-bottom: 2px solid #ffd166;
+  color: #073b4c;
+  background: none;
+  outline: none;
+}
+
+/* Clear floats for header */
+.header-nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Constrain content width and center it on wide screens */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Clearfix so floated columns don't collapse their parent */
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Keep the site title short and legible */
+.site-title {
+  color: #0b6b88; /* teal accent */
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  display: inline-block;
+  padding: 6px 0;
+}
+
+/* CTA banner — tall and visually striking with blue/teal gradient and background image */
+/* Use a semi-opaque teal overlay on top of the image so text stays readable; keep gradient as fallback */
+.cta-banner {
+  background:
+    linear-gradient(180deg, rgba(3,58,77,0.42), rgba(3,58,77,0.42)), /* overlay */
+    url('img/cta-bg.jpg'), /* background image */
+    linear-gradient(135deg, #0f4c75 0%, #1b9aaa 100%); /* fallback gradient */
+  background-size: cover, cover, cover; /* ensure image covers the banner */
+  background-position: center center; /* center the image */
+  background-repeat: no-repeat;
+  color: #ffffff;
+  min-height: 480px; /* tall banner */
+  text-align: center; /* center horizontally */
+  padding: 72px 20px; /* ample vertical space */
+  box-sizing: border-box;
+}
+
+/* Heading — increase shadow so it reads well on top of the image */
+.cta-banner h1 {
+  font-size: 44px;
+  line-height: 1.08;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+/* Short description — constrained width for readability */
+.cta-description {
+  max-width: 700px;
+  margin: 0 auto 26px auto;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* Call-to-action button — bright and high contrast so it stands out */
+.cta-button {
+  display: inline-block;
+  background: #ffd166; /* warm, eye-catching accent */
+  color: #073b4c; /* dark text for contrast */
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.12);
+}
+
+/* Hover and focus styles for accessibility */
+.cta-button:hover {
+  background: #0b6b88; /* invert colors on hover */ 
+  color: #ffffff;
+}
+.cta-button:focus {
+  outline: 3px solid rgba(255,209,102,0.3);
+  outline-offset: 3px;
+}
+
+/* Make sure button elements match the existing card styles and are accessible */
+.option-card,
+.cta-button {
+  border: none;        /* remove native button border */
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: inherit; /* match page font */
+}
+
+.option-card:focus,
+.cta-button:focus {
+  outline: 3px solid rgba(11,107,136,0.18);
+  outline-offset: 3px;
+}
+
+/* Additional info section below the CTA */
+/* Provide white background and centered content */
+.info-section {
+  background: #ffffff; /* keep it clean and readable */
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+/* Use table layout so columns can be vertically centered */
+.info-section .container {
+  display: table;
+  width: 100%;
+  text-align: left; /* keep text left-aligned when side-by-side */
+}
+
+/* Two evenly sized columns using table-cells, vertically centered */
+.info-column {
+  display: table-cell;
+  vertical-align: middle; /* center text relative to image */
+  width: 50%;
+  padding: 0 1%;
+  box-sizing: border-box;
+  float: none; /* override previous float */
+}
+
+/* Image styling for the left column */
+.info-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Heading inside the info column */
+.info-column h2 {
+  margin-top: 0;
+  color: #0b6b88; /* teal accent to match palette */
+}
+
+/* Add horizontal gap and a subtle vertical divider between image and text */
+.info-column:first-child {
+  padding-right: 28px; /* space from image to the divider */
+}
+.info-column:last-child {
+  padding-left: 28px; /* space from divider to text */
+  border-left: 1px solid rgba(11,107,136,0.12); /* subtle vertical line */
+}
+
+/* On small screens, remove divider and extra padding so columns stack cleanly */
+@media (max-width: 720px) {
+  .info-column:first-child,
+  .info-column:last-child {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+  }
+}
+
+/* Stack columns on smaller screens for better fit */
+@media (max-width: 720px) {
+  .info-column {
+    display: block;
+    width: 100%;
+    margin: 0 0 18px 0;
+  }
+}
+
+/* Ensure legibility on small screens */
+@media (max-width: 520px) {
+  .cta-banner h1 {
+    font-size: 28px;
+  }
+  .cta-description {
+    font-size: 16px;
+  }
+  .site-title {
+    font-size: 18px;
+  }
+  .option-card {
+    width: 140px;
+    padding: 10px;
+  }
+}
+
+/* Button transition and enhanced hover/focus styles */
+.cta-button,
+.option-card {
+  transition: background 180ms ease, box-shadow 180ms ease, color 180ms ease;
+}
+
+/* Stronger, CTA-scoped hover/focus/active styles so the blue tint reliably appears */
+.cta-banner .option-card:hover,
+.cta-banner .option-card:focus,
+.cta-banner .option-card:active,
+.cta-banner .cta-button:hover,
+.cta-banner .cta-button:focus,
+.cta-banner .cta-button:active {
+  background:
+    linear-gradient(180deg, rgba(11,107,136,0.20), rgba(11,107,136,0.20)),
+    rgba(255,209,102,0.16);
+  color: #ffffff;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.14);
+}
+
+/* Keep the small description readable when hovered */
+.cta-banner .option-card .option-desc {
+  color: rgba(255,255,255,0.95);
+}
+
+/* Visible focus outline for accessibility */
+.cta-banner .option-card:focus,
+.cta-banner .cta-button:focus {
+  outline: 3px solid rgba(255,255,255,0.14);
+  outline-offset: 3px;
+}
+
+/* Responsive: stack tabs under logo on small screens */
+@media (max-width: 600px) {
+  .site-title, .site-tabs {
+    position: static;
+    transform: none;
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  .site-title {
+    left: auto; /* clear the absolute offset on small screens */
+    margin-left: 0;
+    line-height: normal;
+  }
+  .site-tabs {
+    margin-top: 8px;
+  }
+  .site-tabs li {
+    display: inline-block;
+    margin-left: 10px;
+    line-height: normal;
+  }
+}
+
+/* Dropdown menu */
+.has-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 50; /* make sure the menu stacks above other content */
+}
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+.dropdown-toggle:focus {
+  outline: 3px solid rgba(11,107,136,0.18);
+  outline-offset: 3px;
+}
+
+/* Dropdown placement and visibility fixes */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;       /* immediately under the button */
+  left: 0;         /* align left edge with the button */
+  margin-top: -1px; /* slight overlap so there's no hover gap */
+  background: #ffffff;
+  color: #0b6b88;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(2,24,30,0.12);
+  min-width: 180px;
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+  z-index: 60;
+}
+
+/* keep the menu visible when hovering the parent or the menu itself, and for keyboard focus */
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* small screens: keep the same white background and stacked layout */
+@media (max-width: 600px) {
+  .has-dropdown {
+    display: block;
+    text-align: center;
+  }
+  .dropdown-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background: #ffffff;
+    padding: 0;
+    min-width: auto;
+  }
+  .has-dropdown:hover .dropdown-menu,
+  .has-dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+}

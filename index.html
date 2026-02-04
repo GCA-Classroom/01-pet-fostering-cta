@@ -2,10 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pet Fostering</title>
+  <!-- added for responsiveness -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PetQuest— Help a Rescue Pet</title>
   <link rel="stylesheet" href="style.css">
+  <!-- modern, easy-to-read font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Content goes here -->
+  <header class="site-header" role="banner" aria-label="Site header">
+    <nav class="header-nav container" aria-label="Main site navigation">
+      <a class="site-title" href="/">PetQuest</a>
+      <ul class="site-tabs">
+        <li class="has-dropdown">
+          <button class="site-tab dropdown-toggle" aria-haspopup="true">Find a shelter</button>
+          <ul class="dropdown-menu" aria-label="Find a shelter submenu">
+            <li><a class="dropdown-item" href="#">Near me</a></li>
+            <li><a class="dropdown-item" href="#">Dogs or cats</a></li>
+            <li><a class="dropdown-item" href="#">Donate</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="site-tab dropdown-toggle" aria-haspopup="true">Find a pet</button>
+          <ul class="dropdown-menu" aria-label="Find a pet submenu">
+            <li><a class="dropdown-item" href="#">By type</a></li>
+            <li><a class="dropdown-item" href="#">Nearby</a></li>
+            <li><a class="dropdown-item" href="#">Adoption events</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="site-tab dropdown-toggle" aria-haspopup="true">Pet advice</button>
+          <ul class="dropdown-menu" aria-label="Pet advice submenu">
+            <li><a class="dropdown-item" href="#">Training tips</a></li>
+            <li><a class="dropdown-item" href="#">Health & care</a></li>
+            <li><a class="dropdown-item" href="#">Choosing a pet</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cta-banner" role="region" aria-label="Foster or adopt call to action">
+      <div class="cta-inner">
+        <header>
+          <h1>Give a Rescue Animal a Second Chance — Foster or Adopt&nbsp;Today</h1>
+        </header>
+
+        <p class="cta-description">
+          Fostering saves lives and prepares animals for their forever homes. Your care, even for a short time,
+          makes a big difference for rescue pets and the shelters that support&nbsp;them.
+        </p>
+
+        <p>
+          <a class="cta-button" href="#" role="button">Foster or Adopt&nbsp;Today</a>
+        </p>
+
+        <!-- (quick search options removed) -->
+      </div>
+    </section>
+
+    <section class="info-section" aria-labelledby="foster-more">
+      <div class="container">
+        <div class="info-column">
+          <img class="info-image" src="img/pet.jpg" alt="Happy dog waiting for a foster home">
+        </div>
+        <div class="info-column">
+          <h2 id="foster-more">Why Foster a Pet?</h2>
+          <p>
+            Fostering gives animals the love and care they need while they wait for a forever home.
+            It frees shelter space, helps shy pets learn to trust people, and teaches them basic
+            routines so they’re more adoptable.
+          </p>
+          <p>
+            <a class="cta-button" href="#" role="button">Learn How to Foster</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
